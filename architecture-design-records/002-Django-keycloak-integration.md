@@ -1,10 +1,10 @@
 # django keycloak integration
 
-Date: 12-12-2022
+Date: 15-12-2022
 
 ## Status
 
-In Progress
+In Review
 
 ## Context
 
@@ -19,11 +19,15 @@ The team were evaluating two libraries:
 - [django-allauth](https://github.com/pennersr/django-allauth)
 - [mozilla-django-oidc](https://github.com/mozilla/mozilla-django-oidc)
 
-The recommendation is to use the `mozilla-django-oidc` library: it is an opensource library from the mozilla community, it is released under the MPL 2.0 license, it is maintained by the community and the latest release is `3.0.0` from 14th of Nov 2022.
+The recommendation is to use the `mozilla-django-oidc` library: 
+* it is an opensource library from the mozilla community, 
+* it is released under the MPL 2.0 license, 
+* it is maintained by the community 
+* and the latest release is `3.0.0` from 14th of Nov 2022.
 
 ## Consequences
 
-N/A
+This [GitHub repository](https://github.com/nationalarchives/da-ayr-webapp) will be used to implement the integration.
 
 ## References
 
