@@ -1,18 +1,18 @@
 # EKS vs ECS
 
-Date: 14-12-2022
+Date: 15-12-2022
 
 ## Status
 
-In Progress
+In Review
 
 ## Context
 
-# EKS
+### EKS (Elastic Kubernetes Service)
 
 Amazon Elastic Kubernetes Service (Amazon EKS) makes it easy to deploy, manage, and scale containerized applications using Kubernetes on Amazon Web Services. Amazon EKS runs the Kubernetes management infrastructure for you across multiple Amazon Web Services availability zones to eliminate a single point of failure. Amazon EKS is certified Kubernetes conformant so you can use existing tooling and plugins from partners and the Kubernetes community. Applications running on any standard Kubernetes environment are fully compatible and can be easily migrated to Amazon EKS.
 
-# Benefits
+#### Benefits
 - You don’t have to install, operate, and maintain your own Kubernetes control plane.
 - EKS allows you to easily run tooling and plugins developed by the Kubernetes open-source community. 
 - EKS automates load distribution and parallel processing better than any DevOps engineer could.
@@ -21,7 +21,7 @@ Amazon Elastic Kubernetes Service (Amazon EKS) makes it easy to deploy, manage, 
 - Any application running on EKS is compatible with one running in your existing Kubernetes environment. You can migrate to EKS without applying any changes to code.
 - Supports EC2 spot instances using managed node groups that follow spot best practices and allow some pretty great cost savings. 
 
-# ECS (Elastic Container Service)
+### ECS (Elastic Container Service)
 
 ECS is a convenient way to run Docker containers in AWS platform. AWS refers ECS to "ECS on EC2" or "Fargate" interchangeably.
 
@@ -36,8 +36,8 @@ Additional info can be found here https://aws.amazon.com/ecs/features/
 
 ## Decision
 
-TO DO
+Since the cluster will run only the Django application, the recommendation is to use the ECS cluster with Fargate which will be easier to maintain.
 
 ## Consequences
 
-TO DO
+N/A

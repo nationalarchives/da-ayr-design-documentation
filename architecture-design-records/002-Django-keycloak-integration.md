@@ -12,15 +12,18 @@ In Progress
 
 [Django](https://www.djangoproject.com/) is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
 
-
-
 ## Decision
 
-TO DO
+The team were evaluating two libraries:
+
+- [django-allauth](https://github.com/pennersr/django-allauth)
+- [mozilla-django-oidc](https://github.com/mozilla/mozilla-django-oidc)
+
+The recommendation is to use the `mozilla-django-oidc` library: it is an opensource library from the mozilla community, it is released under the MPL 2.0 license, it is maintained by the community and the latest release is `3.0.0` from 14th of Nov 2022.
 
 ## Consequences
 
-TO DO
+N/A
 
 ## References
 
@@ -28,5 +31,5 @@ TO DO
 - https://github.com/pennersr/django-allauth
 - https://django-allauth.readthedocs.io/en/latest/overview.html
 - https://github.com/mozilla/mozilla-django-oidc
-
-
+- https://pypi.org/project/mozilla-django-oidc/3.0.0/
+- https://openid.net/developers/certified/
