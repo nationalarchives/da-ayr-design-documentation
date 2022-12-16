@@ -1,0 +1,7 @@
+Filepath,AV-Software,AV-SoftwareVersion
+data/content/file-c2.txt,yara,4.2.0
+data/content/folder-a/file-a1.txt,yara,4.2.0
+data/content/folder-b/file-b1.txt,yara,4.2.0
+data/content/file-c1.txt,yara,4.2.0
+data/content/folder-a/file-a2.txt,yara,4.2.0
+data/content/folder-b/file-b2.txt,yara,4.2.0

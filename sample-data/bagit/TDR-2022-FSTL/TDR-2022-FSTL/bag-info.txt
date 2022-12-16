@@ -1,0 +1,12 @@
+Consignment-Type: standard
+Bag-Creator: TDRExportv0.0.183
+Consignment-Start-Datetime: 2022-12-14T11:50:46Z
+Consignment-Series: TSTA 1
+Source-Organization: Testing A
+Contact-Name: Paul Young
+Internal-Sender-Identifier: TDR-2022-FSTL
+Consignment-Completed-Datetime: 2022-12-14T12:00:18Z
+Consignment-Export-Datetime: 2022-12-14T12:01:09Z
+Contact-Email: paul.young@something2.com
+Payload-Oxum: 252.6
+Bagging-Date: 2022-12-14
