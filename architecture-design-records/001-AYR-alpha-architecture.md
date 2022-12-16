@@ -1,10 +1,10 @@
 # AYR Design architecture - Alpha phase
 
-Date: 15-12-2022
+Date: 16-12-2022
 
 ## Status
 
-In Review
+Accepted
 
 ## Context
 
