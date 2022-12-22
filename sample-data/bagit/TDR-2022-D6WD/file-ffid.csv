@@ -1,0 +1,7 @@
+Filepath,Extension,PUID,FFID-Software,FFID-SoftwareVersion,FFID-BinarySignatureFileVersion,FFID-ContainerSignatureFileVersion
+data/content/folder-b/file-b1.txt,txt,x-fmt/111,Droid,6.5.2,DROID_SignatureFile_V96.xml,container-signature-20200121.xml
+data/content/folder-b/file-b2.txt,txt,x-fmt/111,Droid,6.5.2,DROID_SignatureFile_V96.xml,container-signature-20200121.xml
+data/content/file-c2.txt,txt,x-fmt/111,Droid,6.5.2,DROID_SignatureFile_V96.xml,container-signature-20200121.xml
+data/content/folder-a/file-a2.txt,txt,x-fmt/111,Droid,6.5.2,DROID_SignatureFile_V96.xml,container-signature-20200121.xml
+data/content/folder-a/file-a1.txt,txt,x-fmt/111,Droid,6.5.2,DROID_SignatureFile_V96.xml,container-signature-20200121.xml
+data/content/file-c1.txt,txt,x-fmt/111,Droid,6.5.2,DROID_SignatureFile_V96.xml,container-signature-20200121.xml

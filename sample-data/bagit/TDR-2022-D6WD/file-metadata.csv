@@ -1,0 +1,10 @@
+Filepath,FileName,FileType,Filesize,RightsCopyright,LegalStatus,HeldBy,Language,FoiExemptionCode,LastModified,OriginalFilePath
+data/content,content,Folder,,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,,
+data/content/folder-a,folder-a,Folder,,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,,
+data/content/folder-b/file-b1.txt,file-b1.txt,File,45,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,2022-10-24T09:03:27,
+data/content/folder-b/file-b2.txt,file-b2.txt,File,45,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,2022-10-24T09:03:27,
+data/content/file-c2.txt,file-c2.txt,File,36,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,2022-10-24T09:03:27,
+data/content/folder-a/file-a2.txt,file-a2.txt,File,45,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,2022-10-24T09:03:27,
+data/content/folder-a/file-a1.txt,file-a1.txt,File,45,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,2022-11-11T10:04:30,
+data/content/file-c1.txt,file-c1.txt,File,36,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,2022-10-24T09:03:27,
+data/content/folder-b,folder-b,Folder,,Crown Copyright,Public Record(s),"The National Archives, Kew",English,,,
