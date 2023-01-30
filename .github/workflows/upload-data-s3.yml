@@ -1,11 +1,11 @@
-on:
-  push:
-    branches: [feature/AYR-155]
-permissions:
-  id-token: write
-  contents: read
-  pull-requests: write
-  repository-projects: write
+name: Upload Image to S3 bucket
+on: [push]
+
+# permissions:
+#   id-token: write
+#   contents: read
+#   pull-requests: write
+#   repository-projects: write
 jobs:
   upload-sample-data-to-s3:
     runs-on: ubuntu-latest
