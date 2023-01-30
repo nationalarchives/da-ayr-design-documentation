@@ -1,4 +1,3 @@
-name: Upload Sample Data to S3 Bucket
 on:
   push:
     branches: [feature/AYR-155]
