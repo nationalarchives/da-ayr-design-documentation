@@ -1,0 +1,13 @@
+name: Upload Sample Data to S3 Bucket
+on:
+  push:
+    branches: ['dev','main']
+  workflow_dispatch:
+jobs:
+  docker-build-push-ecr:
+    uses: nationalarchives/da-ayr-github-actions/.github/workflows/docker-build-ecr-ecs-deploy-kc.yml@dev
+    secrets:
+      AWS_ROLE: ${{ secrets.AWS_ROLE }}
+      AWS_REGISTRIES: ${{ secrets.AWS_REGISTRIES }}
+      AWS_NONPROD_ACCOUNT: ${{ secrets.AWS_NONPROD_ACCOUNT }}
+      AWS_REGION: ${{ secrets.AWS_REGION }}
