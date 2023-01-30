@@ -30,7 +30,7 @@ jobs:
           role-skip-session-tagging: true
           role-duration-seconds: 1200
       - name: Upload file to S3 Bucket
-        with:
+        env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
         run: |
           aws s3 cp sample-data/ s3://$AWS_S3_BUCKET/ --recursive
