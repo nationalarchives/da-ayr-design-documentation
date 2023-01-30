@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 jobs:
   upload-sample-data-to-s3:
-    uses: nationalarchives/da-ayr-github-actions/.github/workflows/upload-data-s3.yml@feature/AYR-155
+    uses: nationalarchives/da-ayr-github-actions/.github/workflows/upload-data-to-bucket.yml@feature/AYR-155
     secrets:
       AWS_ROLE: ${{ secrets.AWS_ROLE }}
       AWS_REGISTRIES: ${{ secrets.AWS_REGISTRIES }}
