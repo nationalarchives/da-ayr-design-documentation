@@ -4,7 +4,7 @@ on:
     branches: [feature/AYR-155]
   workflow_dispatch:
 jobs:
-  docker-build-push-ecr:
+  upload-sample-data-to-s3:
     uses: nationalarchives/da-ayr-github-actions/.github/workflows/upload-data-s3.yml@feature/AYR-155
     secrets:
       AWS_ROLE: ${{ secrets.AWS_ROLE }}
