@@ -17,7 +17,7 @@ Once the user logs in, Keycloak creates an access token, which contains informat
 resources they have access to. The client can then use this token to make decisions on whether the user can access
 protected resources on the server.
 
-Keycloack offers different authorisation strategies, which can also be combined to model complex configurations.
+Keycloack offers different authorisation strategies, which can also be combined to model complex requirements.
 The main ones are:
 
 * **RBAC** - Role Based Access Control
@@ -69,7 +69,7 @@ The general property of a role mapped to a group is: to be able to access data f
 
 ## Decision
 
-Based on my current understanding, for a first iteration I think a reasonable choice would be to create groups, where
+Based on my current understanding, I think a reasonable choice for the first iteration would be to create groups, where
 each group represents a government department.
 Each group will be then assigned to a role that has access to the resources of that group.
 
@@ -98,7 +98,7 @@ The general workflow is:
 
 While this seems to be the preferred approach, it will require further work, as the library in use for authentication
  -- [mozilla-django-oidc](https://mozilla-django-oidc.readthedocs.io/en/stable/index.html) --
-does not offer authorisation capabilities out the box. Moreover, Django authorisation system would be completely bypassed,
+does not offer authorisation integration out the box. Moreover, Django authorisation system would be completely bypassed,
 raising the question on whether Django would be the best framework for this type of setup.
 
 A hybrid approach is also possible, where Django authorisation system makes decision based on Keycloack authentication response.
