@@ -62,10 +62,11 @@ The three archetypes describe three different scenarios where users have access 
   internal to TNA) from TNA’s FOI team gets an FOI request. They need to log in and access all the
   records we hold from all departments.
 
+The general property of a role mapped to a group is: to be able to access data from their own group.
+
 The final question that the system will need to answer is:
 Can the user access records and metadata from government department X?
 
-The general property of a role mapped to a group is: to be able to access data from their own group.
 
 ## Decision
 
