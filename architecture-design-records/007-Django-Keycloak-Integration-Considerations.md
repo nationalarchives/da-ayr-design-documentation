@@ -1,2 +1,0 @@
-# Securing applications with Keycloack
-
