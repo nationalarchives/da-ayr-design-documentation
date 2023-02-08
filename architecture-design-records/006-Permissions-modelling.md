@@ -79,14 +79,14 @@ As a general example, a user that belongs to Government Department X will have o
 www.ayr.com/department/x/records
 www.ayr.com/department/x/metadata
 
-Any attempt to access any other resource should result in a `401 Not Authorised error`
+Any attempt to access any other resource should result in a `403 Not Authorised error`
 
 This describes the "frequenter" use case.
 
 The "back-stager" is simply a user that belongs to their own department group as well as other groups, which are unique
 for each user.
 
-The "frontliner" is a user that belongs to all the groups.
+The "front-liner" is a user that belongs to all the groups.
 
 ## Consequences
 
