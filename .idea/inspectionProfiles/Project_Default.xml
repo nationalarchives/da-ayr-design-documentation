@@ -1,0 +1,79 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HttpUrlsUsage" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredUrls">
+        <list>
+          <option value="http://localhost" />
+          <option value="http://127.0.0.1" />
+          <option value="http://0.0.0.0" />
+          <option value="http://www.w3.org/" />
+          <option value="http://json-schema.org/draft" />
+          <option value="http://java.sun.com/" />
+          <option value="http://xmlns.jcp.org/" />
+          <option value="http://javafx.com/javafx/" />
+          <option value="http://javafx.com/fxml" />
+          <option value="http://maven.apache.org/xsd/" />
+          <option value="http://maven.apache.org/POM/" />
+          <option value="http://www.springframework.org/schema/" />
+          <option value="http://www.springframework.org/tags" />
+          <option value="http://www.springframework.org/security/tags" />
+          <option value="http://www.thymeleaf.org" />
+          <option value="http://www.jboss.org/j2ee/schema/" />
+          <option value="http://www.jboss.com/xml/ns/" />
+          <option value="http://www.ibm.com/webservices/xsd" />
+          <option value="http://activemq.apache.org/schema/" />
+          <option value="http://schema.cloudfoundry.org/spring/" />
+          <option value="http://schemas.xmlsoap.org/" />
+          <option value="http://cxf.apache.org/schemas/" />
+          <option value="http://primefaces.org/ui" />
+          <option value="http://tiles.apache.org/" />
+          <option value="http://{KEYCLOACK_IP}" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="34">
+            <item index="0" class="java.lang.String" itemvalue="django-environ" />
+            <item index="1" class="java.lang.String" itemvalue="crispy-bootstrap5" />
+            <item index="2" class="java.lang.String" itemvalue="django-stronghold" />
+            <item index="3" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="4" class="java.lang.String" itemvalue="setuptools" />
+            <item index="5" class="java.lang.String" itemvalue="python-slugify" />
+            <item index="6" class="java.lang.String" itemvalue="requests" />
+            <item index="7" class="java.lang.String" itemvalue="redis" />
+            <item index="8" class="java.lang.String" itemvalue="pip" />
+            <item index="9" class="java.lang.String" itemvalue="lxml" />
+            <item index="10" class="java.lang.String" itemvalue="django-model-utils" />
+            <item index="11" class="java.lang.String" itemvalue="xmltodict" />
+            <item index="12" class="java.lang.String" itemvalue="django-xml" />
+            <item index="13" class="java.lang.String" itemvalue="ds-caselaw-marklogic-api-client" />
+            <item index="14" class="java.lang.String" itemvalue="rollbar" />
+            <item index="15" class="java.lang.String" itemvalue="django-anymail" />
+            <item index="16" class="java.lang.String" itemvalue="botocore" />
+            <item index="17" class="java.lang.String" itemvalue="django-crispy-forms" />
+            <item index="18" class="java.lang.String" itemvalue="cryptography" />
+            <item index="19" class="java.lang.String" itemvalue="packaging" />
+            <item index="20" class="java.lang.String" itemvalue="whitenoise" />
+            <item index="21" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="22" class="java.lang.String" itemvalue="hiredis" />
+            <item index="23" class="java.lang.String" itemvalue="boto3" />
+            <item index="24" class="java.lang.String" itemvalue="django" />
+            <item index="25" class="java.lang.String" itemvalue="wsgi-basic-auth" />
+            <item index="26" class="java.lang.String" itemvalue="django-redis" />
+            <item index="27" class="java.lang.String" itemvalue="ds-caselaw-utils" />
+            <item index="28" class="java.lang.String" itemvalue="argon2-cffi" />
+            <item index="29" class="java.lang.String" itemvalue="django-allauth" />
+            <item index="30" class="java.lang.String" itemvalue="pytz" />
+            <item index="31" class="java.lang.String" itemvalue="Pillow" />
+            <item index="32" class="java.lang.String" itemvalue="requests-toolbelt" />
+            <item index="33" class="java.lang.String" itemvalue="psycopg2-binary" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="Stylelint" enabled="true" level="ERROR" enabled_by_default="true" />
+  </profile>
+</component>

@@ -93,6 +93,25 @@ The "front-liner" is a user that belongs to all the groups.
 In the AYR Realm we have 4 groups, 3 of them represent a fictional government department and the last one, TNA, as the name suggests,
 is a group for all TNA users.
 
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloak-groups.png)
+
+We also have a role for each department as well as TNA, mapped to each group.
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloak-roles.png)
+
+In the webapp client authorization tab, we have 3 resources, each one associated to a group, i.e. department/a/*
+linked to department_a. Each resource is protected by a permission, which is evaluated against a policy. 
+Each group policy is associated to their own group permissions, whereas TNA policy is associated with all groups permissions.
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloack-resources.png)
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloak-policy.png)
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keyloak-permissions.png)
+
+
+
+
 
 
 
