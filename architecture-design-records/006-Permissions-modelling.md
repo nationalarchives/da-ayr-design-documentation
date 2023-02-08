@@ -8,7 +8,7 @@ In Progress
 
 ## Context
 
-### Keycloack authorisation system
+### Keycloak authorisation system
 
 Keycloak is an open-source identity and access management solution that works by establishing a secure communication
 channel between a client (e.g. a web application) and a server.
@@ -17,7 +17,7 @@ Once the user logs in, Keycloak creates an access token, which contains informat
 resources they have access to. The client can then use this token to make decisions on whether the user can access
 protected resources on the server.
 
-Keycloack offers different authorisation strategies, which can also be combined to model complex requirements.
+Keycloak offers different authorisation strategies, which can also be combined to model complex requirements.
 The main ones are:
 
 * **RBAC** - Role Based Access Control
@@ -88,19 +88,27 @@ for each user.
 
 The "front-liner" is a user that belongs to all the groups.
 
+### Keycloak Admin Panel Setup
+
+In the AYR Realm we have 4 groups, 3 of them represent a fictional government department and the last one, TNA, as the name suggests,
+is a group for all TNA users.
+
+
+
+
 ## Consequences
 
-As previously mentioned, the ideal solution would be to have Keycloack exclusively control access to resources.
+As previously mentioned, the ideal solution would be to have Keycloak exclusively control access to resources.
 The general workflow is:
 
-* Keycloack issues a token to the client.
+* Keycloak issues a token to the client.
 * The client request access for a combination of resource/user
-* Keycloack gives the appropriate response.
+* Keycloak gives the appropriate response.
 
 While this seems to be the preferred approach, it will require further work, as the library in use for authentication
  -- [mozilla-django-oidc](https://mozilla-django-oidc.readthedocs.io/en/stable/index.html) --
 does not offer authorisation integration out the box. Moreover, Django authorisation system would be completely bypassed,
 raising the question on whether Django would be the best framework for this type of setup.
 
-A hybrid approach is also possible, where Django authorisation system makes decision based on Keycloack authentication response.
-Access control is still managed in Keycloack.
+A hybrid approach is also possible, where Django authorisation system makes decision based on Keycloak authentication response.
+Access control is still managed in Keycloak.
