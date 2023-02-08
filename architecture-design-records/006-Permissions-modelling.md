@@ -8,7 +8,7 @@ In Progress
 
 ## Context
 
-### Keycloack authorisation system
+### Keycloak authorisation system
 
 Keycloak is an open-source identity and access management solution that works by establishing a secure communication
 channel between a client (e.g. a web application) and a server.
@@ -17,7 +17,7 @@ Once the user logs in, Keycloak creates an access token, which contains informat
 resources they have access to. The client can then use this token to make decisions on whether the user can access
 protected resources on the server.
 
-Keycloack offers different authorisation strategies, which can also be combined to model complex requirements.
+Keycloak offers different authorisation strategies, which can also be combined to model complex requirements.
 The main ones are:
 
 * **RBAC** - Role Based Access Control
@@ -79,28 +79,55 @@ As a general example, a user that belongs to Government Department X will have o
 www.ayr.com/department/x/records
 www.ayr.com/department/x/metadata
 
-Any attempt to access any other resource should result in a `401 Not Authorised error`
+Any attempt to access any other resource should result in a `403 Not Authorised error`
 
 This describes the "frequenter" use case.
 
 The "back-stager" is simply a user that belongs to their own department group as well as other groups, which are unique
 for each user.
 
-The "frontliner" is a user that belongs to all the groups.
+The "front-liner" is a user that belongs to all the groups.
+
+### Keycloak Admin Panel Setup
+
+In the AYR Realm we have 4 groups, 3 of them represent a fictional government department and the last one, TNA, as the name suggests,
+is a group for all TNA users.
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloak-groups.png)
+
+We also have a role for each department as well as TNA, mapped to each group.
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloak-roles.png)
+
+In the webapp client authorization tab, we have 3 resources, each one associated to a group, i.e. department/a/*
+linked to department_a. Each resource is protected by a permission, which is evaluated against a policy. 
+Each group policy is associated to their own group permissions, whereas TNA policy is associated with all groups permissions.
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloack-resources.png)
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keycloak-policy.png)
+
+![](/Users/lromagnoli@zaizi.com/Code/da-ayr-design-documentation/architecture-design-records/images/keyloak-permissions.png)
+
+
+
+
+
+
 
 ## Consequences
 
-As previously mentioned, the ideal solution would be to have Keycloack exclusively control access to resources.
+As previously mentioned, the ideal solution would be to have Keycloak exclusively control access to resources.
 The general workflow is:
 
-* Keycloack issues a token to the client.
+* Keycloak issues a token to the client.
 * The client request access for a combination of resource/user
-* Keycloack gives the appropriate response.
+* Keycloak gives the appropriate response.
 
 While this seems to be the preferred approach, it will require further work, as the library in use for authentication
  -- [mozilla-django-oidc](https://mozilla-django-oidc.readthedocs.io/en/stable/index.html) --
 does not offer authorisation integration out the box. Moreover, Django authorisation system would be completely bypassed,
 raising the question on whether Django would be the best framework for this type of setup.
 
-A hybrid approach is also possible, where Django authorisation system makes decision based on Keycloack authentication response.
-Access control is still managed in Keycloack.
+A hybrid approach is also possible, where Django authorisation system makes decision based on Keycloak authentication response.
+Access control is still managed in Keycloak.
