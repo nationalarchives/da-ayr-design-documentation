@@ -1,0 +1,138 @@
+{
+  "mappings" : {
+    "properties" : {
+      "bag_info" : {
+        "properties" : {
+          "consignment_type" : {
+            "type" : "keyword"
+          },
+          "bag_creator" : {
+            "type" : "keyword"
+          },
+          "consignment_start_datetime" : {
+            "type" : "date"
+          },
+          "consignment_series" : {
+            "type" : "keyword"
+          },
+          "source_organization" : {
+            "type" : "keyword"
+          },
+          "contact_name" : {
+            "type" : "keyword"
+          },
+          "internal_sender_identifier" : {
+            "type" : "keyword"
+          },
+          "consignment_completed_datetime" : {
+            "type" : "date"
+          },
+          "consignment_export_datetime" : {
+            "type" : "date"
+          },
+          "contact_email" : {
+            "type" : "keyword"
+          },
+          "payload_oxum" : {
+            "type" : "keyword"
+          },
+          "bagging_date" : {
+            "type" : "date"
+          }
+        }
+      },
+      "file_metadata" : {
+        "type": "nested",
+        "properties" : {
+          "Filepath" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "FileName" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "FileType" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "Filesize" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "RightsCopyright" : {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "LegalStatus" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "HeldBy" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "Language" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "FoiExemptionCode" : {
+            "type" : "keyword"
+          },
+          "LastModified" : {
+            "type" : "date"
+          },
+          "OriginalFilePath" : {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
