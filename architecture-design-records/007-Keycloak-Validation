@@ -5,6 +5,7 @@ The choice of authentication and authorisation for AYR was partly dictated by th
 
 In order to validate this choice, we review the potential choices below (borrowing heavily from the analysis done by TDR) and add a validation process concerned with the impact of KeyCloak on specific use cases for AYR. 
 
+##
 Initial mapping of capabilities based on prior research by TDR:
 
 | KEY:   5=Excellent, 1=Poor                | Silhouette & Own Code                                            | Score | Cognito                                                      | Score | 0Auth                                                          | Score | Keycloak                                                                                                                                | Score |
@@ -39,3 +40,21 @@ Initial mapping of capabilities based on prior research by TDR:
 [here]: https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-ui-customization.html
 [sign in]: images/cognito-sign-in.png
 [getting started]: https://aws.amazon.com/cognito/dev-resources/
+
+## KeyCloak and Access Your Records Requirements
+
+| KEY:   5=Excellent, 1=Poor                | Score | 
+|-------------------------------------------|-------|
+| Django integration						            |  3    |
+| Federated identity with TDR               |  5    |
+| AYR Permission model                      |  4    |
+| AYR Search engine integration             |  5    |
+| AYR Data permissions for bag-its          |  4    |
+
+The main benefits in using KeyCloak remain its suitability for integration with TDR in providing federated identity for users. 
+
+It also provided the basis for a permission model that meets the identified roles for AYR users (Frequenter, Back-Stager and Front-liner).
+
+It remains at this stage of the alpha an open question whether Django is the best fit in terms of web application framework. Integration with KeyCloak has raised questions around the availability of libraries / tools for this integration as well as the best place to model fien-grained permission control.
+
+The potential for integration with OpenSearch and processes for data retrieval from TRE also seem to speak in favour of KeyCloak as a solution. However, here any other OpenID Connect Provider solution would likely work just as well.
