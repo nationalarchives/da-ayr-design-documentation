@@ -56,11 +56,45 @@ services:
       OPENSEARCH_HOSTS: '["https://opensearch-node1:9200","https://opensearch-node2:9200"]' # Define the OpenSearch nodes that OpenSearch Dashboards will query
     networks:
       - opensearch-net
-
+  keycloak-db:
+    image: postgres:13
+    volumes:
+      - keycloak-db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${KEYCLOAK_DB_NAME}
+      POSTGRES_USER: ${KEYCLOAK_DB_USER}
+      POSTGRES_PASSWORD: ${KEYCLOAK_DB_PASSWORD}
+    ports:
+      - "5431:5432"
+    networks:
+      - opensearch-net
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: ${KEYCLOAK_DB_NAME}
+      DB_USER: ${KEYCLOAK_DB_USER}
+      DB_SCHEMA: public
+      DB_PASSWORD: ${KEYCLOAK_DB_PASSWORD}
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - keycloak-db
+    command: ["start-dev", "--import-realm"]
+    networks:
+      - opensearch-net
+    volumes:
+      - keycloak-data:/opt/keycloak/data
+    env_file:
+      - .env
 volumes:
   opensearch-data1:
   opensearch-data2:
-
+  keycloak-db-data:
+  keycloak-data:
 networks:
   opensearch-net:
   
