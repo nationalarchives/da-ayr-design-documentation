@@ -1,6 +1,9 @@
 {
   "mappings" : {
     "properties" : {
+      "ayr_role": {
+        "type" : "keyword"
+      },
       "bag_info" : {
         "properties" : {
           "consignment_type" : {
