@@ -7,7 +7,7 @@
     ```bash
     # Get an arbitrary example bag
     curl --location --remote-name \
-        'https://github.com/nationalarchives/da-ayr-design-documentation/blob/main/sample-data/bagit/TDR-2022-D6WD.tar.gz?raw=true'
+      'https://github.com/nationalarchives/da-ayr-design-documentation/blob/main/sample-data/bagit/TDR-2022-D6WD.tar.gz?raw=true'
     
     # Upload to s3
     export AWS_PROFILE=''
@@ -66,8 +66,8 @@
 
     # Get execution ID
     EXECUTION_ID="$(
-    echo "${SF_EXECUTION_JSON:?}" \
-    | python3 -c 'import json,sys;print(json.load(sys.stdin)["executionArn"])'
+      echo "${SF_EXECUTION_JSON:?}" \
+      | python3 -c 'import json,sys;print(json.load(sys.stdin)["executionArn"])'
     )" && echo "${EXECUTION_ID:?}"
     
     # Get execution result (may still be running)
@@ -80,9 +80,9 @@
     
     # Extract status field
     echo "${RESULT:?}" \
-      | python3 -c 'import json,sys;print(json.load(sys.stdin, strict=False)["status"])'
+    | python3 -c 'import json,sys;print(json.load(sys.stdin, strict=False)["status"])'
     
     # Extract output field 
     echo "${RESULT:?}" \
-      | python3 -c 'import json,sys;print(json.load(sys.stdin, strict=False)["output"])'
+    | python3 -c 'import json,sys;print(json.load(sys.stdin, strict=False)["output"])'
     ```
