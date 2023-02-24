@@ -67,7 +67,7 @@
         stepfunctions \
           start-execution \
           --state-machine-arn "${STEP_FUNCTION_ARN:?}" \
-          --name "${EXECUTION_PREFIX:?}-$(date +%s)" \
+          --name "${EXECUTION_PREFIX:?}$(date +%s)" \
           --input "${TRE_OUTPUT_EVENT:?}" \
     )" && echo "${SF_EXECUTION_JSON:?}"
 
