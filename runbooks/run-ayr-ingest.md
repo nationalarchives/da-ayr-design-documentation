@@ -6,14 +6,21 @@
 
     ```bash
     # Get an arbitrary example bag
-    curl --location --remote-name \
-      'https://github.com/nationalarchives/da-ayr-design-documentation/blob/main/sample-data/bagit/TDR-2022-D6WD.tar.gz?raw=true'
+    BAG_FILE='TDR-2022-D6WD.tar.gz'
+  
+    BAG_URL='https://github.com/nationalarchives/'\
+    'da-ayr-design-documentation/blob/main/'\
+    'sample-data/bagit/'"${BAG_FILE:?}"'?raw=true'
+  
+    curl \
+      --location \
+      --output "${BAG_FILE:?}" \
+      "${BAG_URL:?}"
     
     # Upload to s3
     export AWS_PROFILE=''
     S3_BUCKET=''
-    BAG_FILE='TDR-2022-D6WD.tar.gz'
-  
+    
     aws s3 cp "${BAG_FILE:?}" "s3://${S3_BUCKET:?}/tre-data/${BAG_FILE:?}"
     
     # List items in path tre-data:
