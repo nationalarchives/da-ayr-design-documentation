@@ -10,7 +10,7 @@ This document is an effort to consider the typical case where a _Back-stager_ ma
 
 ## An Inquiry
 
-An inquiry is a roughly speaking a limited scope investigation through a subset of the data available on AYR for the purposes of establishing some facts about a matter of concern to some outside agency. 
+An inquiry is roughly speaking a limited scope investigation through a subset of the data available on AYR for the purposes of establishing some facts about a matter of concern to some outside agency. 
 The requirements of an inquiry is that one or more AYR users who are not TNA employees be given access to records outside their own department's to enable them to conduct their investigation.
 An inquiry may involve more than one user, more than one department's data and may either be indefinitely held or time-boxed with a limited amount of time to complete. It may be possible for an inquiry's time window to be renewed.
 During the period of an inquiry, an AYR user (who is not a _Front-liner_) may have access to numerous records they would not normally have access to.
