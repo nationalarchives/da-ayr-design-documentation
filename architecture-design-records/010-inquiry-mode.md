@@ -47,3 +47,4 @@ To setup an inquiry, an additional component of the web app is required that wil
 4. An administrator approves the request for joining an inquiry which results in the user being added to the appropriate group in KeyCloak.
 5. The user searches for data in the normal way. As they do so, the roles associated with the inquiry group are added to their criteria of their search. This allows them to access data across the departments which are in the scope of the inquiry.
 
+![Inquiry Mode Flow](images/inquiry-mode-flow.png)
