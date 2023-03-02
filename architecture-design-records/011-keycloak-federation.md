@@ -68,7 +68,7 @@ In the "Identity Providers" section of the KeyCloak admin, a new "KeyCloak OpenI
 
 Importantly, the identity provider should be set to use the new authentication flow as in the previous step.
 
-![AYR KeyCloak Identity Provider 3](images/keycloak-fed-idprovide-3.png)
+![AYR KeyCloak Identity Provider 3](images/keycloak-fed-idprovide-final.png)
 
 Futher documentation on this step can be found [here](https://www.keycloak.org/docs/latest/server_admin/#_identity_broker_oidc).
 
@@ -76,5 +76,5 @@ Futher documentation on this step can be found [here](https://www.keycloak.org/d
 
 Once setup, the federated login option will be provided in the KeyCloak login front-end.
 
-![AYR Login with federation](images/keycloak-fed-user-login.png)
+![AYR Login with federation](images/keycloak-fed-user-login-1.png)
 
