@@ -1,14 +1,11 @@
 # Infrastructure Resource and Deployment Design
 
-This document covers resources used in the infrastructure and their deployment methods. Standard deployment practices were adopted. (Continious integration and Continous deployment)
-
-## Continious Integration
-
-* **Terraform and Github Actions
-* **Gihub and Gthub actions was used as re
+This document covers resources used in the infrastructure and their deployment methods. It also covers the reasoning behind the deployment strategy. Standard deployment practices were adopted. (Continious integration and Continous deployment)
 
 ## General Setup
+
 **Infrastructure as Code**
+
 * Terraform used as Infrastructure as code to deploy infrastructure resource on AWS
 * Full instruction of setup can be found in the readme.md in the infra repo. 
 * location here https://github.com/nationalarchives/da-ayr-terraform-infra
