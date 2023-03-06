@@ -31,13 +31,13 @@ Core Resource needed in the infrastructore are:
 
 ## Deployment Design
 
-Main
+Main Deployment:
 This is the deployment of the base infrastructure, this include vpc, subnets internet gateway database, security groups etc
 
-Child: 
+Child Deployment: 
 This is the deployments of the applications and serverless resources i.e lambda and ecr/ecs. Child deployment can be done independent of the Main as long as the Main already exist.
 
-Below is a diagram of the deployment strategy that allows a base deployment but also independent application deployment
+Below is a diagram of the deployment strategy used that allows a base deployment but also independent application deployment
 
 ![Infrastructure and deployment](images/deployment-diagram.png)
 
@@ -49,16 +49,3 @@ The service is performing multiple tasks that are intermittent, i.e ingesting an
 
 Containerization
 A reliable service that is resourceful and can scale seamlessly was the idea behind adopting ecr and ecs cluster to host and run the authentication and search service.
-
-
-
-
-1) what problem we were trying to solve, 
-PROJECT
-
-
-2) how we approached it, 
-APPROACH
-
-
-3) how it went - what worked / didn't work. Ideally done today but Monday if not today, please.
