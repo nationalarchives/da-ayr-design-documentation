@@ -44,4 +44,4 @@ Access can be secured using an API Gateway Lambda function that:
 
 Steps 1 through 7 in the following diagram illustrate this process:
 
-![images/012-search-api-auth-flow.png](images/012-search-api-auth-flow.png)
+![images/013-search-api-auth-flow.png](images/013-search-api-auth-flow.png)
