@@ -1,10 +1,13 @@
-# KeyCloak Federation
+# Infrastructure Resource and Deployment Design
 
-This documents covers how to use KeyCloak federation in order to give AYR users a single sign on experience when they are also TDR users.
+This document covers resources used in the infrastructure and their deployment methods. Standard deployment practices were adopted. (Infrastructure as code,Continious integration and deployment)
 
-To achieve this, we need to use federation which delegates authentication from one KeyCloak instance to another authentication platform using OpenID Connect. In this case, this is connecting AYR's KeyCloak realm to TDR's KeyCloak realm.
+## General Setup
 
-## Division of Responsibilities
+1. Terraform is used to build the infrastructure resource on AWS
+2. Github is used as code repository
+3. Github-Actions is used to build and deploy the infrastructure and application
+4. S3 Bucket is used for built artefact 
 
 The two KeyCloak realms have different responsibilities for managing authentication and authorisation.
 
@@ -22,10 +25,6 @@ AYR realm provides:
 
 To add a user to AYR under this arrangement, the following steps would be undertaken.
 
-1. The user is added to TDR and uploads their documents.
-2. The user requests addition to AYR.
-3. A record is added to the AYR KeyCloak matching the email address of their account used in TDR.
-4. The user is assigned to the appropriate group(s) in AYR's KeyCloak.
 
 
 
