@@ -11,7 +11,7 @@ This document covers resources used in the infrastructure and their deployment m
 * location [here](https://github.com/nationalarchives/da-ayr-terraform-infra)
 
 **Code Repository**
-* Github is used as code repository for infrastructure and application repository. See below breakdown:
+* Github is used as code repository for infrastructure and application. See below breakdown:
 
     - Infrastructure [Check](https://github.com/nationalarchives/da-ayr-terraform-infra)
     - Keycloak Application [Check](https://github.com/nationalarchives/da-ayr-auth-server)
@@ -24,7 +24,7 @@ This document covers resources used in the infrastructure and their deployment m
 * Github action are stored [here](https://github.com/nationalarchives/da-ayr-github-actions)
 
 **Artefact Repository**
-* Artefacts are pushed and stored in s3 bucket with versioning enabled
+* Artefacts are pushed and stored in s3 bucket with versioning enabled.
 
 ## Infrastructure Resource
 
@@ -73,4 +73,4 @@ The service is performing multiple tasks that are intermittent, i.e ingesting an
 A reliable service that is resourceful and can scale seamlessly was the idea behind adopting ecr and ecs cluster to host and run the authentication and search service.
 
 **Search and Indexing**
-Tested a few search applications but ended up using AWS Opensearch. An evaluation of other the other in comparisn can be found [here](008-search-engine-options.md) 
+Tested a few search applications we have decided to use AWS Opensearch. An evaluation of others in comparisn can be found [here](008-search-engine-options.md) 
