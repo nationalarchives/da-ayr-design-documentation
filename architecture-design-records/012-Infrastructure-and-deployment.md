@@ -64,7 +64,7 @@ Below is a diagram of the deployment strategy used that allows a base deployment
 ![Infrastructure and deployment](images/deployment-diagram.png)
 
 
-## Findings and Adobtions
+## Findings and Adoptions
 
 **Serverless Design (Lambda API Gateway)**
 The service is performing multiple tasks that are intermittent, i.e ingesting and transforming data. A serverless approach was adopted to maximise resource and minimise cost. (Lambda functions, api gateway)
@@ -73,4 +73,4 @@ The service is performing multiple tasks that are intermittent, i.e ingesting an
 A reliable service that is resourceful and can scale seamlessly was the idea behind adopting ecr and ecs cluster to host and run the authentication and search service.
 
 **Search and Indexing**
-Tested a few search applications we have decided to use AWS Opensearch. An evaluation of others in comparisn can be found [here](008-search-engine-options.md) 
+After evaluating a few search applications we choose to use AWS Opensearch. An evaluation of others in comparisn can be found [here](008-search-engine-options.md) 
