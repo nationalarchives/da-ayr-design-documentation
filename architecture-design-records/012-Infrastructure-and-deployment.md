@@ -8,19 +8,20 @@ This document covers resources used in the infrastructure and their deployment m
 
 * Terraform used as Infrastructure as code to deploy infrastructure resource on AWS
 * Full instruction of setup can be found in the readme.md in the infra repo. 
-* location here https://github.com/nationalarchives/da-ayr-terraform-infra
+* location [here](https://github.com/nationalarchives/da-ayr-terraform-infra)
 
 **Code Repository**
 * Github is used as code repository for infrastructure and application repository. See below breakdown:
 
-    - Infrastructure (https://github.com/nationalarchives/da-ayr-terraform-infra)
-    - Keycloak Application (https://github.com/nationalarchives/da-ayr-auth-server)
-    - Web Client Application (https://github.com/nationalarchives/da-ayr-webapp)
-    - Lambda Functions (https://github.com/nationalarchives/da-ayr-lambdas)
+    - Infrastructure [Check](https://github.com/nationalarchives/da-ayr-terraform-infra)
+    - Keycloak Application [Check](https://github.com/nationalarchives/da-ayr-auth-server)
+    - Web Client Application [Check](https://github.com/nationalarchives/da-ayr-webapp)
+    - Lambda Functions [Check](https://github.com/nationalarchives/da-ayr-lambdas)
 
 **Deployment Pipelines**
+
 * Github-Actions pipelnes used for buildng artefacts and deploying the infrastructure and application
-* Github action are stored here (https://github.com/nationalarchives/da-ayr-github-actions)
+* Github action are stored [here](https://github.com/nationalarchives/da-ayr-github-actions)
 
 **Artefact Repository**
 * Artefacts are pushed and stored in s3 bucket with versioning enabled
@@ -43,7 +44,7 @@ This is the deployment of the base infrastructure, this include
    - subnets 
    - internet gateway
    - Nat Gateway 
-   - database, 
+   - databases, 
    - ACLs and security groups
    - Elastic IP Addresses
    - Application load balancer
@@ -63,10 +64,13 @@ Below is a diagram of the deployment strategy used that allows a base deployment
 ![Infrastructure and deployment](images/deployment-diagram.png)
 
 
-## Findings  
+## Findings and Adobtions
 
 **Serverless Design (Lambda API Gateway)**
 The service is performing multiple tasks that are intermittent, i.e ingesting and transforming data. A serverless approach was adopted to maximise resource and minimise cost. (Lambda functions, api gateway)
 
 **Containerization (ECR/ECS)**
 A reliable service that is resourceful and can scale seamlessly was the idea behind adopting ecr and ecs cluster to host and run the authentication and search service.
+
+**Search and Indexing**
+Tested a few search applications but ended up using AWS Opensearch. An evaluation of other the other in comparisn can be found [here](008-search-engine-options.md) 
